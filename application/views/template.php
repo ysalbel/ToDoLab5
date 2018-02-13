@@ -10,7 +10,7 @@
 	</head>
 	<body>
         <div class="container">
-            <div class="navbar">
+            <div class="navbar navbar-default">
                 <div class="navbar-inner">
                     {menubar} 
 				</div>
@@ -20,10 +20,10 @@
                 {content}
             </div>
             <div id="footer" class="span12">
-                Copyright &copy; 2017,  <a href="mailto:someone@somewhere.com">Me</a>.
+                Copyright &copy; 2018,  <a href="mailto:someone@somewhere.com">Me</a>.
             </div>
         </div>
-        <script src="/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
 	</body>
 </html>
