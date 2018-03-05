@@ -49,6 +49,9 @@ class Mtce extends Application {
             'ftask'      => form_label('Task description') . form_input('task', $task->task),
             'fpriority'  => form_label('Priority') . form_dropdown('priority', $this->app->priority(), $task->priority),
             'zsubmit'    => form_submit('submit', 'Update the TODO task'),
+            'fsize'  => form_label('Size') . form_dropdown('priority', $this->app->size(), $task->size),
+            'fgroup'  => form_label('Group') . form_dropdown('group', $this->app->group(), $task->group),
+            'fstatus'  => form_label('Status') . form_dropdown('status', $this->app->status(), $task->status),
         );
         $this->data = array_merge($this->data, $fields);
 
@@ -118,6 +121,7 @@ class Mtce extends Application {
         $this->load->library('form_validation');
         $this->form_validation->set_rules($this->tasks->rules());
 
+        // retrieve & update data transfer buffer
         // retrieve & update data transfer buffer
         $task = (array) $this->session->userdata('task');
         $task = array_merge($task, $this->input->post());
