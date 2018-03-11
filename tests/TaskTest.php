@@ -9,10 +9,24 @@ class TaskTest extends TestCase
     private $Task;
     public function setUp()
     {
-      // Load CI instance normally
-      $this->CI = &get_instance();
-      $this->CI->load->model('task_entity');
-      $this->Task = new Task();
+        // Load CI instance normally
+        $this->CI = &get_instance();
+        $this->CI->load->model('task');
+        $this->Task = new Task();
+        $this->Task->Flag = 1;
+        $this->Task->Group = 2;
+        $this->Task->priority = 3;
+        $this->Task->size = 1;
+        $this->Task->status = 1;
+      
+    }
+    
+    function testSetup() {
+        $this->assertEquals(1, $this->Task->Flag);
+        $this->assertEquals(2, $this->Task->Group);
+        $this->assertEquals(3, $this->Task->priority);
+        $this->assertEquals(1, $this->Task->size);
+        $this->assertEquals(1, $this->Task->status);
     }
     
     public function testAgeSetter()
