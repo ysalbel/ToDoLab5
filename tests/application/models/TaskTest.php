@@ -18,9 +18,8 @@ class TaskTest extends TestCase
         $this->Task->priority = 3;
         $this->Task->size = 1;
         $this->Task->status = 1;
-      
     }
-    
+    /*
     function testSetup() {
         $this->assertEquals(1, $this->Task->Flag);
         $this->assertEquals(2, $this->Task->Group);
@@ -28,41 +27,34 @@ class TaskTest extends TestCase
         $this->assertEquals(1, $this->Task->size);
         $this->assertEquals(1, $this->Task->status);
     }
-    
-    public function testAgeSetter()
-    {
-                $expected = 20;
-                $this->Task->age = 20;
-                $this->assertEquals(20,$this->Task->age);
-    }
-    
-    public function testSetFlag ($value){
+    */
+    public function testSetFlag (){
         $expected = 1;
-        $this->Task->flag = 1;
+        $this->Task->flag = $expected;
         $this->assertEquals(1,$this->Task->flag);
     }
     
-    public function testSetGroup($value){
+    public function testSetGroup(){
         $expected = 2;
-        $this->Task->group = 2;
-        $this->assertEquals(2,$this->Task->group);
+        $this->Task->group = $expected;
+        $this->assertEquals($expected,$this->Task->group);
     }
     
-    public function testSetPriority($value){
+    public function testSetPriority(){
         $expected = 3;
-        $this->Task->priority = 3;
-        $this->assertEquals(3,$this->Task->priority);
+        $this->Task->priority = $expected;
+        $this->assertEquals($expected,$this->Task->priority);
     }
     
-    public function testSetSize($value){
+    public function testSetSize(){
         $expected = 1;
-        $this->Task->size = 1;
-        $this->assertEquals(1,$this->Task->size);
+        $this->Task->size = $expected;
+        $this->assertEquals($expected,$this->Task->size);
     }
     
-    public function testSetStatus($value){
+    public function testSetStatus(){
         $expected = 1;
-        $this->Task->status = 1;
-        $this->assertEquals(1,$this->Task->status);
+        $this->Task->status = $expected;
+        $this->assertEquals($expected,$this->Task->status);
     }
   }
