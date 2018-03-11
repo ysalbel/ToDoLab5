@@ -29,31 +29,31 @@ class TaskTest extends TestCase
     }
     */
     public function testSetFlag (){
-        $expected = 1;
+        $expected = 01;
         $this->Task->flag = $expected;
         $this->assertEquals(1,$this->Task->flag);
     }
     
     public function testSetGroup(){
-        $expected = 2;
+        $expected = 1234;
         $this->Task->group = $expected;
         $this->assertEquals($expected,$this->Task->group);
     }
     
     public function testSetPriority(){
-        $expected = 3;
+        $expected = 123;
         $this->Task->priority = $expected;
         $this->assertEquals($expected,$this->Task->priority);
     }
     
     public function testSetSize(){
-        $expected = 1;
+        $expected = 123;
         $this->Task->size = $expected;
         $this->assertEquals($expected,$this->Task->size);
     }
     
     public function testSetStatus(){
-        $expected = 1;
+        $expected = 12;
         $this->Task->status = $expected;
         $this->assertEquals($expected,$this->Task->status);
     }
